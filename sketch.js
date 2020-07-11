@@ -40,11 +40,9 @@ function draw() {
   
 
   /* Allow the ball to bounceoff from the paddle */
-  ball.bounceOff(paddle)
+  ball.bounceOff(paddle,randomVelocity)
 
-  if(ball.bounceOff(paddle)){
-  randomVelocity();
-  }
+ 
   
   /* Also assign a collision callback function, so that the ball can have a random y velocity, making the game interesting */
 
@@ -94,6 +92,6 @@ function randomVelocity()
 
   /* this function gets called when the ball bounces off the paddle */
   /* assign the ball a random vertical velocity, so it bounces off in random direction */
-  ball.velocityY = Math.random(1,9)
+  ball.velocityY = random(1,9)
   }
 
